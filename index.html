@@ -1,0 +1,41 @@
+---
+layout: default
+title: Home
+BASE_PATH: /STA371/
+---
+<div id="home">
+  
+  <h1>STA 371H: Statistics and Modeling (Honors)</h1>  
+  <p>
+  Instructor: James Scott <br>
+  Office: CBA 6.478 <br>
+  Office hours: MW 3:30-4:30 PM <br>
+  email: firstname dot lastname at mccombs dot utexas dot edu
+  </p>
+
+    <p>
+  Teaching Assistant: David Puelz <br>
+  Office and office hours TBA <br>
+  email: firstname dot lastname at phd dot mccombs dot utexas dot edu
+</p>
+  
+  <h1>About</h1>  
+  <p>
+  <a
+  href="http://jgscott.github.com/STA371/files/syllabus-2014-STA371.pdf">Syllabus.</a>
+  STA 371 is a second course on statistical modeling, probability, and
+  decision analysis.
+ </p>
+
+
+ 
+  <h1>Week by week</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a
+  href="http://jgscott.github.com/STA371{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+
+</div>
+
