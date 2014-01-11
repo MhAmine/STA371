@@ -1,0 +1,21 @@
+---
+layout: default
+title: Data
+---
+
+<div id="data">
+
+<h1>Data files</h1>
+<ul>
+{% for file in site.data.data %}
+  <li>
+    <a href="https://jgscott.github.com/STA371/data/{{ file.data }}">
+      {{ file.data }}
+    </a>
+  </li>
+{% endfor %}
+</ul>
+  
+</div>
+
+
