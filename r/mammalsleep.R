@@ -1,20 +1,15 @@
 library(mosaic)
-library(graphics)
 library(faraway)
 
-
 ### Load in the data on mammalian sleep patterns from the library faraway
-
 data(mammalsleep, package="faraway")
 
 ### Look at the data
 # The NA's are missing data
 mammalsleep
 
-
 # Compute some summary statistics
 summary(mammalsleep)
-
 
 # Histogram of the outcome variable
 hist(mammalsleep$dream)
@@ -24,30 +19,17 @@ hist(mammalsleep$dream, breaks=20)
 summary(mammalsleep$danger)
 
 # Uh oh, R thinks "danger" is a quantitative variable!
-# Recast the variable as a factor, i.e. something categorical
-
+# Recast the variable as a "factor", i.e. categorical variable
 mammalsleep$danger = factor(mammalsleep$danger)
 
 # Now try again... we get a table of category counts
 summary(mammalsleep$danger)
 
-
 # Look at a boxplot
-boxplot(dream~danger, data=mammalsleep)
+bwplot(dream~danger, data=mammalsleep)
 
-# Try a stripchart
-stripchart(dream~danger, data=mammalsleep)
-
-# Now a vertical stripchart
-stripchart(dream~danger, data=mammalsleep,
-	vertical=TRUE)
-
-# Now with horizontal jitter added to the points
-# Try this a few different times to get a feel for what 
-# method="jitter" is doing
-stripchart(dream~danger, data=mammalsleep,
-	method="jitter", vertical=TRUE)
-
+# Try a dotplot
+dotplot(dream~danger, data=mammalsleep)
 
 # Now compute the groupwise means
 mean(dream~danger,data=mammalsleep)
@@ -61,19 +43,16 @@ sd(dream~danger,data=mammalsleep, na.rm=TRUE)
 
 # Now let's use R's "lm" command, which will be
 # a major workhorse for the entire course
-
 lm1 = lm(dream~danger, data=mammalsleep)
 
-# Extract the coefficients (two ways)
+# Extract the coefficients
 coef(lm1)
-lm1$coefficients
 
 # How do we interpret these numbers?
 # Not the same as the group means
 # (Look at them side by side)
 GroupMeans = mean(dream~factor(danger),data=mammalsleep, na.rm=TRUE)
 rbind(GroupMeans, lm1$coefficients)
-
 
 # We could easily change the baseline case from danger=1 to danger=5
 # by reordering the factor
@@ -84,12 +63,8 @@ lm2 = lm(dream~danger.reord, data=mammalsleep)
 GroupMeans2 = mean(dream~factor(danger.reord),data=mammalsleep, na.rm=TRUE)
 rbind(GroupMeans2, lm2$coefficients)
 
-
 # Compare the fitted values for both linear models
 cbind(fitted(lm1), fitted(lm2))
-
-
-
 
 
 
