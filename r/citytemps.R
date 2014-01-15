@@ -18,6 +18,8 @@ hist(casandie$Temp, main="Average Daily Temperatures in San Diego, 1995-2011")
 
 # Now for Rapid City
 hist(sdrapcty$Temp, main="Average Daily Temperatures in Rapid City, 1995-2011")
+hist(sdrapcty$Temp, main="Average Daily Temperatures in Rapid City, 1995-2011",
+     xlab='Temperature')
 
 
 # Put histograms for San Diego and Rapid City next to each other

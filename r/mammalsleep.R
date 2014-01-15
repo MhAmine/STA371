@@ -12,8 +12,8 @@ mammalsleep
 summary(mammalsleep)
 
 # Histogram of the outcome variable
-hist(mammalsleep$dream)
-hist(mammalsleep$dream, breaks=20)
+histogram(mammalsleep$dream)
+histogram(mammalsleep$dream, breaks=20)
 
 # a table of the "danger" index...
 summary(mammalsleep$danger)

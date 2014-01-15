@@ -16,6 +16,15 @@ summary(ut2000)
 head(ut2000)
 tail(ut2000)
 
+# GPA Histogram
+# Notice we reference a variable by DataSet$VariableName
+histogram(ut2000$GPA)
+
+# Compute some basic summary statistics
+mean(ut2000$GPA)
+sd(ut2000$GPA)
+favstats(ut2000$GPA)
+
 # Three basic bivariate plots
 bwplot(GPA ~ School, data=ut2000)
 dotplot(GPA ~ School, data=ut2000)
@@ -35,3 +44,7 @@ mean(SAT.V ~ School, data=ut2000)
 
 sd(SAT.Q ~ School, data=ut2000)
 sd(SAT.V ~ School, data=ut2000)
+
+# Store the results of these computations in other variables
+satqmeans = mean(SAT.Q ~ School, data=ut2000)
+satqmeans
