@@ -24,3 +24,17 @@ for(i in 2:length(readdat)) {
 	myfile = readdat[i]
 	cat("- data: ", myfile, "\n", sep='', file= writedat, append=TRUE)
 }
+
+
+readexamples = list.files("../files/examples/")
+writeexamples = "examples.yml"
+
+myfile = readexamples[1]
+cat("- example: ", myfile, "\n", sep='', file= writeexamples)
+
+if(length(readexamples) > 1) {
+	for(i in 2:length(readexamples)) {
+		myfile = readexamples[i]
+		cat("- example: ", myfile, "\n", sep='', file= writeexamples, append=TRUE)
+	}
+}

@@ -46,7 +46,7 @@ title: Resources
  statistics in R.
   </p>
 
-  
+
   <h1>Videos</h1>  
   <p>
 
@@ -56,6 +56,18 @@ title: Resources
  fantastic resource. <br>
   
   </p>
+
+  <h1>Example Data Analyses</h1>
+<ul>
+{% for ex in site.data.examples %}
+  <li>
+    <a href="https://jgscott.github.com/STA371/files/examples/{{ ex.example }}">
+      {{ ex.example }}
+    </a>
+  </li>
+{% endfor %}
+</ul>
+  
   
 </div>
 
