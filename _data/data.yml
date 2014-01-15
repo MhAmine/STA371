@@ -25,5 +25,6 @@
 - data: semicon.csv
 - data: springbok.csv
 - data: sumsq.csv
+- data: TitanicSurvival.csv
 - data: ut2000.csv
 - data: visits.csv
