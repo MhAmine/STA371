@@ -38,3 +38,20 @@ if(length(readexamples) > 1) {
 		cat("- example: ", myfile, "\n", sep='', file= writeexamples, append=TRUE)
 	}
 }
+
+
+
+
+readscribe = list.files("../files/scribe/")
+writescribe = "scribe.yml"
+
+myfile = readscribe[1]
+cat("- scribe: ", myfile, "\n", sep='', file= writescribe)
+
+if(length(readscribe) > 1) {
+	for(i in 2:length(readscribe)) {
+		myfile = readscribe[i]
+		cat("- scribe: ", myfile, "\n", sep='', file= writescribe, append=TRUE)
+	}
+}
+

@@ -67,6 +67,19 @@ title: Resources
   </li>
 {% endfor %}
 </ul>
+
+
+  <h1>Scribe</h1>
+<ul>
+    <p>Below are some of your classmates' notes, day by day.</p>
+{% for ex in site.data.scribe %}
+  <li>
+    <a href="https://jgscott.github.com/STA371/files/scribe/{{ ex.scribe }}">
+      {{ ex.scribe }}
+    </a>
+  </li>
+{% endfor %}
+</ul>
   
   
 </div>
