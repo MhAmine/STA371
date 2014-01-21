@@ -1,5 +1,5 @@
-- r: afc.R
 - r: citytemps.R
 - r: mammalsleep.R
+- r: pickup.R
 - r: titanic.R
 - r: ut2000.R
