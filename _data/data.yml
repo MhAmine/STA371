@@ -11,6 +11,7 @@
 - data: gonefishing.csv
 - data: house.csv
 - data: hubble.txt
+- data: infmort.csv
 - data: kickedcars.csv
 - data: kidney.csv
 - data: oil.txt
@@ -26,5 +27,7 @@
 - data: springbok.csv
 - data: sumsq.csv
 - data: TitanicSurvival.csv
+- data: trafficdeaths.csv
 - data: ut2000.csv
+- data: utilities.csv
 - data: visits.csv

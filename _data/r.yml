@@ -2,4 +2,7 @@
 - r: mammalsleep.R
 - r: pickup.R
 - r: titanic.R
+- r: trafficdeaths.R
+- r: transformations.R
 - r: ut2000.R
+- r: utilities.R
