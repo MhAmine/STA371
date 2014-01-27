@@ -14,6 +14,7 @@
 - data: infmort.csv
 - data: kickedcars.csv
 - data: kidney.csv
+- data: milk.csv
 - data: oil.txt
 - data: orings.csv
 - data: peakdemand.csv
@@ -21,6 +22,7 @@
 - data: profs.csv
 - data: respir.csv
 - data: rxntime.txt
+- data: savings.csv
 - data: sdrapcty.txt
 - data: seatbelts.csv
 - data: semicon.csv
