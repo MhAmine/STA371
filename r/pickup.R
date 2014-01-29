@@ -91,6 +91,14 @@ plot(price~miles,data=pickup2, pch=19)
 lm1 = lm(price~miles,data=pickup2)
 abline(lm1)
 
+std.resid = sd(resid(lm1))
+
+sum(resid(lm1) < -3971.273)
+sum(resid(lm1) > 3971.273)
+
+pdata(c(-3971.273, 3971.273), resid(lm1))
+
+
 # Extract the residuals
 fittedprice = fitted(lm1)
 residualprice = resid(lm1)
