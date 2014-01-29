@@ -1,5 +1,6 @@
 - r: citytemps.R
 - r: mammalsleep.R
+- r: milkprice.R
 - r: pickup.R
 - r: sumsq.R
 - r: titanic.R
