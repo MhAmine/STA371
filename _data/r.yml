@@ -1,6 +1,7 @@
 - r: citytemps.R
 - r: mammalsleep.R
 - r: pickup.R
+- r: sumsq.R
 - r: titanic.R
 - r: trafficdeaths.R
 - r: transformations.R
