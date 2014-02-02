@@ -1,4 +1,5 @@
 - r: citytemps.R
+- r: gonefishing.R
 - r: mammalsleep.R
 - r: milkprice.R
 - r: pickup.R
