@@ -20,13 +20,13 @@ abline(lmfull)
 nsamp = 30
 
 # Try taking a sample a few different times
-lmsamp = lm(weight~volume, data=sample(gonefishing,30))
+lmsamp = lm(weight~volume, data=sample(gonefishing,nsamp))
 coef(lmsamp)
 
 
 # We can automate the process of taking multiple samples
 # Try 10 first
-do(10)*lm(weight~volume, data=sample(gonefishing,30))
+do(10)*lm(weight~volume, data=sample(gonefishing,nsamp))
 
 # How about 1000?
 do(1000)*lm(weight~volume, data=sample(gonefishing,30))
@@ -56,6 +56,10 @@ myfishingtrip = sample(gonefishing,30)
 # The model using your sample
 lmmytrip = lm(weight~volume, data=myfishingtrip)
 coef(lmmytrip)
+
+plot(weight~volume, data=myfishingtrip)
+abline(lmmytrip)
+
 
 # Try a single bootstrapped sample from your sample
 
