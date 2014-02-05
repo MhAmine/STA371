@@ -1,6 +1,16 @@
-creatinine = read.csv('creatinine.csv')
+library(mosaic)
+#creatinine = read.csv('creatinine.csv')
 
 N = nrow(creatinine)
+
+plot(creatclear~age, data=creatinine)
+lm1 = lm(creatclear~age, data=creatinine)
+summary(lm1)
+
+boot1 = do(1000)*lm(creatclear~age, data=resample(creatinine))
+
+hist(boot1$age)
+sd(boot1$age)
 
 
 # Create two subsets: one for learning and one for prediction
