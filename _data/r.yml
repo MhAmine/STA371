@@ -1,8 +1,10 @@
 - r: baseballsalary.R
+- r: carauction.R
 - r: citytemps.R
 - r: creatinine.R
 - r: gonefishing.R
 - r: hw04.R
+- r: hw05.R
 - r: mammalsleep.R
 - r: milkprice.R
 - r: pickup.R
