@@ -37,6 +37,7 @@ xtabs(~store, data=cheese)
 
 boxplot(vol~disp, data=cheese)
 lm1 = lm(vol~disp, data=cheese)
+lm1b = lm(log(vol)~disp, data=cheese)
 summary(lm1)
 
 # Look store by store
@@ -46,6 +47,8 @@ boxplot(vol~disp, data=subset(cheese, store=='SYRACUSE - PRICE CHOPPER'))
 # Put in dummy variables store by store
 lm2 = lm(vol~disp + store, data=cheese)
 summary(lm2)
+
+lm2b = lm(log(vol)~disp + store, data=cheese)
 
 # Now look at price
 plot(vol~price, data=cheese)
