@@ -2,12 +2,14 @@
 - r: carauction.R
 - r: citytemps.R
 - r: creatinine.R
+- r: gala.R
 - r: gonefishing.R
 - r: hw04.R
 - r: hw05.R
 - r: mammalsleep.R
 - r: milkprice.R
 - r: pickup.R
+- r: salary.R
 - r: sumsq.R
 - r: titanic.R
 - r: trafficdeaths.R

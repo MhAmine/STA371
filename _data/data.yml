@@ -11,6 +11,7 @@
 - data: esdpredict.csv
 - data: ethanol.csv
 - data: fips.csv
+- data: gala.csv
 - data: gdpgrowth.csv
 - data: gonefishing.csv
 - data: house.csv
@@ -26,6 +27,7 @@
 - data: profs.csv
 - data: respir.csv
 - data: rxntime.txt
+- data: salary.csv
 - data: savings.csv
 - data: sdrapcty.txt
 - data: seatbelts.csv
