@@ -1,31 +1,37 @@
 library(mosaic)
 
-cars = read.csv("carauction.csv", header=TRUE)
-summary(cars)
+carauction = read.csv("carauction.csv", header=TRUE)
+summary(carauction)
 
-# Plot warranty cost versus mileage
-plot(WarrantyCost~I(VehOdo/1000), data=cars, pch=19, col=rgb(20,20,20,10,maxColorVal=256))
+# Plot price cost versus age
+plot(MMRAcquisitonRetailCleanPrice~VehicleAge, data=carauction, pch=19, col=rgb(20,20,20,10,maxColorVal=256))
 
 # Start adding dummy variables corresponding to categorical predictions
-lm1 = lm(WarrantyCost~I(VehOdo/1000), data=cars)
-summary(lm1)
+lm1 = lm(MMRAcquisitonRetailCleanPrice ~ VehicleAge, data=carauction)
+summary(lm1) 
 
-lm2 = lm(WarrantyCost~I(VehOdo/1000) + Make, data=cars)
-summary(lm2)
+# Dummy variables for the different makes
+xtabs(~ Make, data=carauction)
+lm2 = lm(MMRAcquisitonRetailCleanPrice ~ VehicleAge + Make, data=carauction)
+summary(lm2) 
 
-lm3 = lm(WarrantyCost~I(VehOdo/1000) + Make + Transmission, data=cars)
-summary(lm3)
+# Add variables for Color and Transmission
+lm3 = lm(MMRAcquisitonRetailCleanPrice ~ VehicleAge + Make + Color + Transmission, data=carauction)
+summary(lm3) 
 
-# and on and on until we construct a good predictive model
-mycar = data.frame(VehOdo = 50000, Make = "TOYOTA", Transmission = "AUTO")
-predict(lm3, mycar)
+# More dummies and a second numerical predictor: vehicle mileage
+lm4 = lm(MMRAcquisitonRetailCleanPrice ~ VehicleAge + Make + Color + Transmission + IsOnlineSale + Auction + VNST + I(VehOdo/1000) , data=carauction)
+summary(lm4) 
 
-# Careful with the prediction interval though: notice the fan!
-plot(resid(lm3)~I(VehOdo/1000), data=cars, pch=19, col=rgb(20,20,20,10,maxColorVal=256))
+# Why not add more dummy variables for Model?
+xtabs(~ Model, data=carauction)
 
 # Histogram of the residuals
-# Highly non-Gaussian!
-hist(resid(lm3), breaks=100, col='lightgrey')
+# Maybe non-Gaussian!
+hist(resid(lm4), breaks=100, col='lightgrey')
+
+# Residuals versus fitted values
+plot(resid(lm4) ~ fitted(lm4), pch=19, col=rgb(20,20,20,20,maxColorVal=256))
 
 # The conclusion: can't trust the standard errors or prediction intervals
 # from the Gaussian regression model
