@@ -60,8 +60,8 @@ coef(lm7)
 lm8 = lm(log(Area)~log(Elevation), data=gala)
 areaadj = resid(lm8)
 
-# Now regress log species on adjusted elevation
-# and look at the slope to estimate marginal effect, adjusting for area
+# Now regress log species on adjusted area
+# and look at the slope to estimate marginal effect, adjusting for elevation
 lm9 = lm(log(Species)~areaadj, data=gala)
 coef(lm9)
 
