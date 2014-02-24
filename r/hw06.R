@@ -69,7 +69,7 @@ plot(vol~price, data=mysub)
 points(vol~price, data=sub1, col='blue', pch=19)
 points(vol~price, data=sub0, col='red', pch=19)
 curve(exp(9.26095 + 1.62211)*x^(-2.42583), add=TRUE, col='red')
-curve(exp(9.37579 + 1.62211 + 0.34153)*x^(-2.53159 - 0.14761), add=TRUE, col='blue')
+curve(exp(9.26095 + 1.62211 + 0.34153)*x^(-2.53159 - 0.14761), add=TRUE, col='blue')
 
 plot(log(vol) ~ fitted(lm5), data=cheese)
 abline(0,1)
