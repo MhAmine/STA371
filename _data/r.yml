@@ -1,6 +1,7 @@
 - r: baseballsalary.R
 - r: carauction.R
 - r: citytemps.R
+- r: cps85.R
 - r: creatinine.R
 - r: gala.R
 - r: gonefishing.R
