@@ -10,6 +10,7 @@
 - r: hw06.R
 - r: mammalsleep.R
 - r: milkprice.R
+- r: permtest.R
 - r: pickup.R
 - r: salary.R
 - r: sumsq.R
