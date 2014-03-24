@@ -39,6 +39,7 @@
 - data: sumsq.csv
 - data: TitanicSurvival.csv
 - data: trafficdeaths.csv
+- data: ukgas.csv
 - data: ut2000.csv
 - data: utilities.csv
 - data: visits.csv
