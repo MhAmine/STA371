@@ -36,7 +36,10 @@ hist(perm1$r.squared)
 # Compare with actual model:
 summary(lm1)
 
+lm2 = lm(eval ~ beauty + minority + gender + division + credits + log(allstudents) + native, data=profs)
+
 # Now division looks pretty useless
+summary(lm2)
 drop1(lm2)
 
 # This gives us a reasonable model
