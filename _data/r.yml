@@ -9,6 +9,7 @@
 - r: hw04.R
 - r: hw05.R
 - r: hw06.R
+- r: hw07.R
 - r: mammalsleep.R
 - r: milkprice.R
 - r: permtest.R
@@ -19,5 +20,6 @@
 - r: titanic.R
 - r: trafficdeaths.R
 - r: transformations.R
+- r: ukgas.R
 - r: ut2000.R
 - r: utilities.R
