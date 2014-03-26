@@ -17,7 +17,7 @@ plot(cdcflu ~ week, data=googleflu)
 lmfull = lm(cdcflu ~ . - week, data=googleflu)
 
 # Now backwards selection using AIC as an Occam's Razor
-lmstep = step(lmfull, direction='both')
+lmstep = step(lmfull, direction='backward')
 summary(lmstep)
 
 # Compare the actual with the fitted values
