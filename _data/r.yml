@@ -14,6 +14,7 @@
 - r: milkprice.R
 - r: permtest.R
 - r: pickup.R
+- r: probability.R
 - r: salary.R
 - r: seatbelts.R
 - r: sumsq.R
