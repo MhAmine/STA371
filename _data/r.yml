@@ -12,8 +12,10 @@
 - r: hw07.R
 - r: mammalsleep.R
 - r: milkprice.R
+- r: MonteCarloIntro.R
 - r: permtest.R
 - r: pickup.R
+- r: Portfolio.R
 - r: probability.R
 - r: salary.R
 - r: seatbelts.R
