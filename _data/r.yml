@@ -3,6 +3,7 @@
 - r: citytemps.R
 - r: cps85.R
 - r: creatinine.R
+- r: diversification.R
 - r: gala.R
 - r: gonefishing.R
 - r: googleflu.R
@@ -13,6 +14,7 @@
 - r: mammalsleep.R
 - r: milkprice.R
 - r: MonteCarloIntro.R
+- r: montecarlotips.R
 - r: permtest.R
 - r: pickup.R
 - r: Portfolio.R
