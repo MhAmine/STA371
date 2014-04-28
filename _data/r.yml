@@ -1,4 +1,5 @@
 - r: baseballsalary.R
+- r: bballbets.R
 - r: carauction.R
 - r: citytemps.R
 - r: cps85.R
